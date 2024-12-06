@@ -4,6 +4,36 @@
 using namespace std;
 
 //[Missing Code 1] Write definition of the function findGrade() here.
+//ขอให้เติมเฉพาะ Function findGrade() เท่านั้น โดยที่ไม่ต้องเติม Function
+#include <iostream>
+using namespace std ;
+char findGrade(double i) 
+{
+    char Z ;
+    if (i>90)
+    {
+     Z='A' ;
+    } 
+     else if (i>75 && i<=90)
+     {
+         Z='B' ;
+     }
+     else if (i>60 && i<=75)
+     {
+         Z='C' ;
+     }
+     else if (i>45 && i<=60)
+     {
+         Z='D' ;
+     }
+     else if (i<=45){
+         Z='F' ;
+     }
+return  Z ;
+ 
+}
+
+
 
 int main(){
 	//Input the number of students
@@ -17,9 +47,13 @@ int main(){
 	while(i < N){
 		cout << "Name of student " << i+1 << ": ";
 		cin.ignore();
+		
 		//[Missing Code 2] Get name of the i-th students that may include whitespace.
+		getline(cin,name[i]) ;
 		cout << "Score of student " << i+1 << ": ";
-		//[Missing Code 3] Get score of the i-th students.
+		
+		cin>>score[i] ;//[Missing Code 3] Get score of the i-th students.
+		
 		i++;
 	}
 	
